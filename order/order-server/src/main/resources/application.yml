@@ -17,4 +17,3 @@ eureka:
 PRODUCT:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #\u968F\u673A\u8BBF\u95EE
-
