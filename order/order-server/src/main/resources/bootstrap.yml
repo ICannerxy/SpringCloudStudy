@@ -7,5 +7,9 @@ spring:
         enable: true
         service-id: CONFIG
       profile: dev
-
+    stream:
+      bindings:
+        myMessage1:
+          group: order #\u540C\u4E00\u7EC4\u53EA\u6709\u4E00\u4E2A\u5B9E\u4F8B\u53EF\u4EE5\u63A5\u6536\u5230\u6D88\u606F
+          content-type: application/json
 
