@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: env
+server:
+  port: 9000
+zuul:
+  routes:
+    myProduct:
+      path: /product/**
+      serviceId: product
+#  简洁写法
+#    product: /product/**
+    # 禁止访问接口列表
+#  ignored-patterns:
+#    - /**/product/listForOrder
