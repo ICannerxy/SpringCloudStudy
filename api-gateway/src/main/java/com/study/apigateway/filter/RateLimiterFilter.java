@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  * 限流过滤器
  **/
 @Component
-public class RateLimiteFilter extends ZuulFilter {
+public class RateLimiterFilter extends ZuulFilter {
 
     private static final RateLimiter RATE_LIMITER = RateLimiter.create(100);
 

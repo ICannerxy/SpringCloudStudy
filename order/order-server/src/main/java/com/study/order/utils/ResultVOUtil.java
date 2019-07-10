@@ -2,6 +2,7 @@ package com.study.order.utils;
 
 
 import com.study.order.VO.ResultVO;
+import com.study.order.enums.ResultEnum;
 
 /**
  * @program: SpringCloudStudy
@@ -10,10 +11,8 @@ import com.study.order.VO.ResultVO;
  **/
 public class ResultVOUtil {
 
-    public static ResultVO success(Object obj) {
-        ResultVO resultVO = new ResultVO<>();
-        resultVO.setCode(0);
-        resultVO.setMsg("成功");
+    public static <T>ResultVO success(T obj) {
+        ResultVO<T> resultVO = new ResultVO<>(ResultEnum.SUCCESS);
         resultVO.setData(obj);
         return resultVO;
     }

@@ -1,6 +1,7 @@
-package com.study.order.VO;
+package com.study.auth.server.VO;
 
-import com.study.order.enums.ResultEnum;
+
+import com.study.auth.server.enums.ResultEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,7 +27,7 @@ public class ResultVO<T> {
     /*具体数据*/
     private T data;
 
-    public ResultVO (ResultEnum resultEnum) {
+    public ResultVO(ResultEnum resultEnum) {
         this.code = resultEnum.getCode();
         this.msg = resultEnum.getMessage();
     }
