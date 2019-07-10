@@ -12,4 +12,26 @@ spring:
         myMessage1:
           group: order #\u540C\u4E00\u7EC4\u53EA\u6709\u4E00\u4E2A\u5B9E\u4F8B\u53EF\u4EE5\u63A5\u6536\u5230\u6D88\u606F
           content-type: application/json
+  zipkin:
+    base-url: http://47.98.63.22:9411/
+  sleuth:
+    sampler:
+      probability: 1  # 抽样百分比 默认10%
 
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000 # 自定义全局超时时间
+    getProductList:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000 #自定义接口超时时间
+
+logging:
+  level:
+    org.springframework.cloud.openfeign: debug

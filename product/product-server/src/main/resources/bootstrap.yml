@@ -7,3 +7,6 @@ spring:
         enable: true
         service-id: CONFIG
       profile: dev
+logging:
+  level:
+    org.springframework.cloud.openfeign: debug
